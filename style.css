@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik Mono One', sans-serif;
+    text-decoration: none;
+}
+a{
+    color: #00ff1f;
+}
+.container{
+    overflow-x: hidden;
+}
+.phase{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(111deg, #00000099, #00000099);
+}
+#phase1{
+    align-items: center;
+    justify-content: space-evenly;
+}
+#phase1 h1{
+    color: rgb(41, 255, 56);
+    font-family: 'Poppins', sans-serif;
+    padding: 0px 24px;
+    font-size: 2.4rem;
+}
+.video{
+    position: fixed;
+    right: 0%;
+    bottom: 0%;
+    z-index: -1;
+    object-fit: cover
+}
+.inputs{
+    text-align: center;
+    width: 80%;
+    color: white;
+    font-size: 1rem;
+    padding: 12px;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+.inputs::placeholder{
+    color:aliceblue;
+}
+#phase2{
+    justify-content: center;
+    align-items: center;
+}
+#phase3{
+    align-items: center;
+    justify-content: space-around;
+}
+.code{
+    background-color: #00000000;
+    color: rgb(41, 255, 56);
+    display: flex;
+    width: 0vw;
+    justify-content: center;
+    align-items: center;
+    height: 84vh;
+}
+.codeArea{
+    width: 90%;
+    height: 95%;
+    background: #00000047;
+    position: relative;
+    overflow: scroll;
+    font-size: 11px;
+    padding: 20px 36px;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+   line-height: 15px;
+align-items: self-start;
+}
+
+/* scrollbar  */
+
+.codeArea::-webkit-scrollbar{
+    width: 6px;
+}
+.codeArea::-webkit-scrollbar-thumb{
+    border-radius: 100vw;
+    background-color: rgb(255, 60, 0);
+}
+.codeArea::-webkit-scrollbar-track{
+background-color: #00ff1f;
+border-radius: 100vw;
+}
+.span-list{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+.span-list:nth-of-type(8) {
+    color: red;
+}
+.output{
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    line-height: 3px;
+}
+/* Media Queries  */
+
+@media (max-width:400px) {
+    .inputs{
+        font-size: 0.9rem;
+        width: 80%;
+}
+#target{
+    font-size: 0.6rem;
+}
+}
+@media (max-width:300px) {
+    .span-list{
+        font-size: 1em;
+    }
+}
+
+@media (min-aspect-ratio:16/9) {
+    .video{
+        width:100% ;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio:16/9) {
+    .video{
+        width: auto;
+        height: 100%;
+    }
+}
+/* Js Class List  */
+@keyframes openCodeX {
+    0%{
+width: 0vw;
+    }
+    100%{
+        width: 72vw;
+    }
+}
+.wide{
+    width: 72vw;
+    transition: 2s; 
+}
